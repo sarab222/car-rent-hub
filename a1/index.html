@@ -1,1 +1,99 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Car Rental System</title>
+  <link rel="stylesheet" href="n.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="search-bar">
+      <input type="text" placeholder="Search here" />
+      <button>Search</button>
+    </div>
+    <div class="site-title">Car Rental System</div>
+    <button id="menu-toggle">☰</button>
+    <ul id="menu" class="menu">
+      <li><a href="#">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="co login.html">Login</a></li>
+    </ul>
+  </nav>
+
+  <!-- Booking Form -->
+  <div class="form-container">
+    <h2>What type of vehicle?</h2>
+    <div class="vehicle-options">
+      <button class="btn-green">Cars</button>
+    </div>
+
+    <div class="form-grid">
+      <div>
+        <label>Pickup and return location</label>
+        <input type="text" placeholder="City, address, point of interest" />
+        <label class="checkbox-label">
+          <input type="checkbox" checked /> Same return location
+        </label>
+      </div>
+
+      <div>
+        <label>Pickup date and time</label>
+        <input type="date" />
+        <input type="time" />
+      </div>
+
+      <div>
+        <label>Return date and time</label>
+        <input type="date" />
+        <input type="time" />
+      </div>
+    </div>
+
+    <div class="options">
+      <select>
+        <option>I am 26+</option>
+        <option>I am under 26</option>
+      </select>
+
+      <select>
+        <option>I live in Pakistan</option>
+        <option>Other Country</option>
+      </select>
+
+      <label class="checkbox-label">
+        <input type="checkbox" /> I have a <strong>negotiated rate</strong>
+      </label>
+
+      <button class="btn-yellow">Search</button>
+    </div>
+  </div>
+
+  <!-- Car Cards -->
+  <div class="card-container">
+    <div class="car-card">
+      <img src="car.jpg" alt="Car image" />
+      <h3>Toyota Corolla 2022</h3>
+      <p>Reliable sedan with excellent fuel efficiency. Available now for rent.</p>
+      <button class="rent-btn">Rent Now</button>
+    </div>
+
+    <div class="car-card">
+      <img src="car.jpg" alt="Car image" />
+      <h3>Toyota Corolla 2018</h3>
+      <p>Reliable sedan with excellent fuel efficiency. Available now for rent.</p>
+      <button class="rent-btn">Rent Now</button>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('menu-toggle').addEventListener('click', function () {
+      document.getElementById('menu').classList.toggle('show');
+    });
+  </script>
+</body>
+</html>
