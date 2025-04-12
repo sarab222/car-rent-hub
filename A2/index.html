@@ -1,1 +1,113 @@
 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Car Rental System</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+  <!-- Navigation -->
+  <nav class="bg-blue-700 py-4 px-6 md:px-12 text-white flex justify-between items-center shadow">
+    <div class="flex items-center gap-2">
+      <input type="text" placeholder="Search here" class="px-4 py-2 rounded-md w-28 md:w-60 text-gray-800" />
+      <button class="px-4 py-2 bg-black hover:bg-gray-800 rounded-md">Search</button>
+    </div>
+    <div class="text-xl md:text-2xl font-bold">Car Rental System</div>
+    <button id="but" class="md:hidden text-white text-2xl">☰</button>
+    <ul id="menu" class="hidden md:flex flex-col md:flex-row gap-4 text-center absolute md:static bg-blue-700 w-full md:w-auto left-0 top-16 p-4 md:p-0 shadow-md md:shadow-none z-10">
+      <li><a href="task.html" class="block md:inline hover:underline">Home</a></li>
+      <li><a href="about.html" class="block md:inline hover:underline">About</a></li>
+      <li><a href="#" class="block md:inline hover:underline">Services</a></li>
+      <li><a href="co login.html" class="block md:inline hover:underline">Login</a></li>
+    </ul>
+  </nav>
+
+  <!-- Booking Form -->
+  <div class="bg-white max-w-6xl mx-auto mt-10 p-6 md:p-10 rounded-lg shadow-md">
+    <h2 class="text-2xl font-bold mb-6 text-blue-700">What type of vehicle?</h2>
+
+    <div class="flex gap-4 mb-6">
+      <button class="px-6 py-2 bg-green-600 text-white rounded hover:bg-green-700">Cars</button>
+
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- Pickup -->
+      <div>
+        <label class="block mb-1 font-medium">Pickup and return location</label>
+        <input type="text" class="w-full border px-4 py-2 rounded" placeholder="City, address, point of interest" />
+        <label class="flex items-center mt-2 text-sm">
+          <input type="checkbox" checked class="mr-2" /> Same return location
+        </label>
+      </div>
+
+      <!-- Pickup Date -->
+      <div>
+        <label class="block mb-1 font-medium">Pickup date and time</label>
+        <input type="date" class="w-full border px-4 py-2 rounded mb-2" />
+        <input type="time" class="w-full border px-4 py-2 rounded" />
+      </div>
+
+      <!-- Return Date -->
+      <div>
+        <label class="block mb-1 font-medium">Return date and time</label>
+        <input type="date" class="w-full border px-4 py-2 rounded mb-2" />
+        <input type="time" class="w-full border px-4 py-2 rounded" />
+      </div>
+    </div>
+
+    <!-- Options -->
+    <div class="mt-6 flex flex-wrap gap-4 items-center">
+      <select class="border px-4 py-2 rounded">
+        <option>I am 26+</option>
+        <option>I am under 26</option>
+      </select>
+
+      <select class="border px-4 py-2 rounded">
+        <option>I live in Pakistan</option>
+        <option>Other Country</option>
+      </select>
+
+      <label class="flex items-center">
+        <input type="checkbox" class="mr-2" /> I have a <span class="font-semibold ml-1">negotiated rate</span>
+      </label>
+
+      <button onclick="searchCars()" class="ml-auto bg-yellow-400 hover:bg-yellow-500 px-6 py-2 rounded font-semibold">
+        Search
+      </button>
+    </div>
+  </div>
+
+  <!-- Car Cards -->
+  <div class="flex flex-wrap justify-center gap-8 mt-12 px-4">
+    <!-- Repeat Card -->
+    <div class="bg-white rounded-lg shadow-md p-4 w-full sm:w-72 hover:shadow-xl transform hover:scale-105 transition">
+      <img src="car.jpg" alt="Car image" class="w-full h-52 object-cover rounded" />
+      <h3 class="text-lg font-bold mt-3">Toyota Corolla 2022</h3>
+      <p class="text-gray-600 text-sm mt-1">Reliable sedan with excellent fuel efficiency. Available now for rent.</p>
+      <button class="mt-3 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-800 transition">Rent Now</button>
+    </div>
+
+    <div class="bg-white rounded-lg shadow-md p-4 w-full sm:w-72 hover:shadow-xl transform hover:scale-105 transition">
+        <img src="car.jpg" alt="Car image" class="w-full h-52 object-cover rounded" />
+
+      <h3 class="text-lg font-bold mt-3">Toyota Corolla 2018</h3>
+      <p class="text-gray-600 text-sm mt-1">Reliable sedan with excellent fuel efficiency. Available now for rent.</p>
+      <button class="mt-3 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-800 transition">Rent Now</button>
+    </div>
+
+
+  </div>
+
+  <script>
+    document.getElementById('but').addEventListener('click', function () {
+      document.getElementById('menu').classList.toggle('hidden');
+    });
+  </script>
+
+</body>
+</html>
