@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f3f4f6;
+    color: #1f2937;
+  }
+  
+  .navbar {
+    background-color: #1e40af;
+    padding: 16px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    position: relative;
+  }
+  
+  .brand {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .toggle-button {
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: white;
+    display: none;
+    cursor: pointer;
+  }
+  
+  .nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .nav-menu li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    padding: 5px;
+    transition: text-decoration 0.3s;
+  }
+  
+  .nav-menu li a:hover,
+  .nav-menu li a.active {
+    text-decoration: underline;
+  }
+  
+  /* Responsive Nav */
+  @media (max-width: 768px) {
+    .toggle-button {
+      display: block;
+    }
+  
+    .nav-menu {
+      flex-direction: column;
+      background-color: #1e40af;
+      position: absolute;
+      width: 100%;
+      top: 60px;
+      left: 0;
+      display: none;
+      padding: 20px 0;
+    }
+  
+    .nav-menu.show {
+      display: flex;
+    }
+  }
+  
+  /* About Section */
+  .about-section {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 20px;
+  }
+  
+  .about-section h1 {
+    font-size: 32px;
+    color: #1e40af;
+    margin-bottom: 20px;
+  }
+  
+  .about-section .intro {
+    font-size: 18px;
+    margin-bottom: 30px;
+  }
+  
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    align-items: center;
+  }
+  
+  .about-image {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+  
+  .why-choose h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .why-choose ul {
+    list-style: disc;
+    padding-left: 20px;
+    line-height: 1.8;
+  }
+  
+  .mission {
+    margin-top: 40px;
+  }
+  
+  .mission h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  /* Footer */
+  .footer {
+    background-color: #1e40af;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+  }
